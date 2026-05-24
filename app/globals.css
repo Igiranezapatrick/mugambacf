@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f7efe1;
+  color: #24130f;
+}
+
+::selection {
+  background: #c99a4a;
+  color: #24130f;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+.hero-mask {
+  background:
+    linear-gradient(90deg, rgba(36, 19, 15, 0.88), rgba(36, 19, 15, 0.52), rgba(36, 19, 15, 0.28)),
+    linear-gradient(180deg, rgba(36, 19, 15, 0.35), rgba(36, 19, 15, 0.65));
+}
+
+.noise {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(36, 19, 15, 0.08) 1px, transparent 0);
+  background-size: 22px 22px;
+}
