@@ -6,7 +6,9 @@ import { MotionReveal } from "@/components/MotionReveal";
 import { RequestForm } from "@/components/RequestForm";
 import { SectionIntro } from "@/components/SectionIntro";
 import { Testimonials } from "@/components/Testimonials";
+import { FindUs } from "@/components/FindUs";
 import { services, trustPoints } from "@/lib/static-data";
+
 
 export default function Home() {
   return (
@@ -63,9 +65,16 @@ export default function Home() {
 
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div className="relative min-h-[520px] overflow-hidden rounded-lg">
-            <Image src="/media/factory.jpg" alt="Mugamba Coffee Factory coffee bar and machines" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
-          </div>
+          <div className="relative min-h-[520px] overflow-hidden rounded-lg bg-espresso/5">
+  <Image 
+    src="/media/factory.jpg" 
+    alt="Mugamba Coffee Factory coffee bar and machines" 
+    fill 
+    priority // <-- Forces Next.js to preload this above-the-fold image
+    sizes="(min-width: 1024px) 45vw, 100vw" 
+    className="object-cover z-10" // <-- Ensures the image stacks correctly
+  />
+</div>
           <div className="self-center">
             <SectionIntro eyebrow="About Mugamba coffee" title="Roasted with care, served with business discipline" body="The brand experience is built around quality Arabica coffee, precise roasting, reliable coffee machines, and a clear request process for every buyer." />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -122,12 +131,19 @@ export default function Home() {
 
       <section id="contact" className="bg-crema py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <SectionIntro eyebrow="Contact preview" title="Send a request and continue on WhatsApp" body="Every customer request can be stored in Supabase for admin tracking, then opened as a prefilled WhatsApp conversation with the business owner." />
+          <div className="space-y-8">
+            <SectionIntro
+              eyebrow="Find us"
+              title="Visit Mugamba in Kigali"
+              body="Use the map below to locate us, then send your request and continue on WhatsApp." 
+            />
+            <FindUs />
           </div>
+
           <RequestForm requestType="contact" />
         </div>
       </section>
+
     </main>
   );
 }
