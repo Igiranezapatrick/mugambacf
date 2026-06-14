@@ -27,20 +27,20 @@ export function ProductCard({ product, onRequest }: ProductCardProps) {
           <span className="absolute left-0 top-4 bg-brass px-3 py-1 text-xs font-bold uppercase tracking-wider text-espresso">{product.category}</span>
         ) : null}
       </div>
-      <div className="space-y-4 p-6">
+      <div className="space-y-3 sm:space-y-4 p-4 sm:p-6">
         <div>
-          <h3 className="font-serif text-2xl text-espresso tracking-tight">{product.name}</h3>
-          <p className="mt-3 text-base leading-relaxed text-espresso/75">{product.description}</p>
+          <h3 className="font-serif text-xl sm:text-2xl text-espresso tracking-tight">{product.name}</h3>
+          <p className="mt-2 sm:mt-3 text-sm sm:text-base leading-relaxed text-espresso/75">{product.description}</p>
         </div>
-        <div className="grid gap-2 text-base text-espresso/80">
+        <div className="grid gap-1 sm:gap-2 text-sm sm:text-base text-espresso/80">
           {product.origin ? <span className="flex justify-between border-b border-espresso/5 pb-1"><span>Origin</span> <span className="font-bold">{product.origin}</span></span> : null}
           {product.roast_level ? <span className="flex justify-between border-b border-espresso/5 pb-1"><span>Roast</span> <span className="font-bold">{product.roast_level}</span></span> : null}
           {product.package_size ? <span className="flex justify-between border-b border-espresso/5 pb-1"><span>Size</span> <span className="font-bold">{product.package_size}</span></span> : null}
           {product.rental_duration ? <span className="flex justify-between border-b border-espresso/5 pb-1"><span>Duration</span> <span className="font-bold">{product.rental_duration}</span></span> : null}
-          {product.price ? <span className="mt-2 text-xl font-bold text-roast">{product.price}</span> : null}
+          {product.price ? <span className="mt-1 sm:mt-2 text-lg sm:text-xl font-bold text-roast">{product.price}</span> : null}
         </div>
         {product.specs ? (
-          <div className="grid gap-2 border-t border-espresso/10 pt-4 text-sm text-espresso/65">
+          <div className="grid gap-1 sm:gap-2 border-t border-espresso/10 pt-3 sm:pt-4 text-xs sm:text-sm text-espresso/65">
             {Object.entries(product.specs).slice(0, 3).map(([key, value]) => (
               <span key={key} className="flex justify-between"><span>{key}</span> <span>{value}</span></span>
             ))}
@@ -48,10 +48,10 @@ export function ProductCard({ product, onRequest }: ProductCardProps) {
         ) : null}
         <button
           onClick={() => onRequest(product, requestType)}
-          className="mt-2 inline-flex w-full items-center justify-center gap-3 bg-espresso px-6 py-4 text-base font-bold uppercase tracking-widest text-crema transition hover:bg-roast active:bg-espresso"
+          className="mt-2 inline-flex w-full items-center justify-center gap-2 sm:gap-3 bg-espresso px-4 py-3 sm:px-6 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:bg-roast active:bg-espresso"
         >
-          <MessageCircle size={20} />
-          {product.product_type === "machine" ? "Request Purchase" : product.product_type === "rental" ? "Request Rental" : "Order Now"}
+          <MessageCircle size={18} />
+          {product.product_type === "machine" ? "Purchase" : product.product_type === "rental" ? "Rental" : "Order"}
         </button>
       </div>
     </article>

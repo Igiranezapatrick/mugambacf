@@ -10,12 +10,18 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 18px; /* Base font size for elderly suitability */
+  font-size: 16px; /* Reduced mobile base font size */
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 20px; /* Larger on tablets/desktops */
+    font-size: 18px; /* Balanced tablet font size */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px; /* Professional desktop font size */
   }
 }
 
@@ -23,8 +29,14 @@ body {
   margin: 0;
   background: #f7efe1;
   color: #24130f;
-  line-height: 1.6;
+  line-height: 1.5; /* Slightly tighter line height for smaller screens */
   -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1024px) {
+  body {
+    line-height: 1.6;
+  }
 }
 
 /* Sharp corner utility to override rounded corners globally where needed */
