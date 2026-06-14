@@ -19,24 +19,21 @@ export default function Home() {
         </video>
         <div className="hero-mask absolute inset-0" />
         <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl content-center px-4 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brass">Kigali · Rwanda Arabica · Coffee expertise</p>
-            <h1 className="mt-6 font-serif text-5xl leading-[0.98] sm:text-7xl lg:text-8xl">Mugamba Coffee Factory</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-crema/82">
+          <div className="max-w-4xl">
+            <p className="text-base font-bold uppercase tracking-[0.3em] text-brass">Kigali · Rwanda Arabica · Coffee expertise</p>
+            <h1 className="mt-8 font-serif text-6xl leading-[1] sm:text-8xl lg:text-9xl">Mugamba Coffee Factory</h1>
+            <p className="mt-8 max-w-2xl text-xl leading-relaxed text-crema/90">
               Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/products" className="inline-flex items-center gap-2 rounded-full bg-brass px-5 py-3 text-sm font-semibold text-espresso transition hover:bg-crema">
-                <ShoppingBag size={17} /> Buy Coffee
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="/products" className="inline-flex items-center gap-3 rounded-full bg-brass px-8 py-4 text-lg font-bold text-espresso transition hover:bg-crema">
+                <ShoppingBag size={22} /> Buy Coffee
               </Link>
-              <Link href="/rentals" className="inline-flex items-center gap-2 rounded-full border border-crema/25 px-5 py-3 text-sm font-semibold text-crema transition hover:border-brass hover:text-brass">
+              <Link href="/rentals" className="inline-flex items-center gap-3 rounded-full border border-crema/30 px-8 py-4 text-lg font-bold text-crema transition hover:border-brass hover:text-brass">
                 Rent Machine
               </Link>
-              <Link href="/machines" className="inline-flex items-center gap-2 rounded-full border border-crema/25 px-5 py-3 text-sm font-semibold text-crema transition hover:border-brass hover:text-brass">
-                Buy Coffee Machine
-              </Link>
-              <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-crema/25 px-5 py-3 text-sm font-semibold text-crema transition hover:border-brass hover:text-brass">
-                <MessageCircle size={17} /> Contact on WhatsApp
+              <a href="#contact" className="inline-flex items-center gap-3 rounded-full border border-crema/30 px-8 py-4 text-lg font-bold text-crema transition hover:border-brass hover:text-brass">
+                <MessageCircle size={22} /> Contact Us
               </a>
             </div>
           </div>
@@ -133,9 +130,9 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div className="space-y-8">
             <SectionIntro
-              eyebrow="Find us"
+              eyebrow="Get in touch"
               title="Visit Mugamba in Kigali"
-              body="Use the map below to locate us, then send your request and continue on WhatsApp." 
+              body="Reach out to us via phone or email, or visit our factory in Gikondo. We are ready to assist with all your coffee needs." 
             />
             <FindUs />
           </div>

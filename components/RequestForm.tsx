@@ -66,46 +66,46 @@ export function RequestForm({ requestType, product, compact = false, onClose }: 
   }
 
   return (
-    <form onSubmit={submit} className={compact ? "grid gap-4" : "grid gap-4 rounded-lg border border-espresso/10 bg-white p-5 shadow-soft"}>
+    <form onSubmit={submit} className={compact ? "grid gap-6" : "grid gap-6 rounded-xl border border-espresso/10 bg-white p-6 shadow-soft"}>
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-roast">{requestLabel(requestType)}</p>
-          <h3 className="mt-1 font-serif text-2xl text-espresso">{product?.name || "Send a request"}</h3>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-roast">{requestLabel(requestType)}</p>
+          <h3 className="mt-2 font-serif text-3xl text-espresso">{product?.name || "Send a request"}</h3>
         </div>
         {onClose ? (
-          <button type="button" onClick={onClose} className="rounded-full border border-espresso/10 p-2 text-espresso/70 transition hover:text-espresso" aria-label="Close request form">
-            <X size={18} />
+          <button type="button" onClick={onClose} className="rounded-full border border-espresso/15 p-3 text-espresso/70 transition hover:text-espresso" aria-label="Close request form">
+            <X size={24} />
           </button>
         ) : null}
       </div>
 
-      <label className="grid gap-2 text-sm font-medium text-espresso">
+      <label className="grid gap-3 text-base font-bold text-espresso">
         Full name
-        <input name="fullName" className="rounded-md border border-espresso/15 bg-crema/40 px-4 py-3 outline-none ring-brass/30 transition focus:ring-4" placeholder="Your full name" />
+        <input name="fullName" className="rounded-lg border border-espresso/20 bg-crema/40 px-5 py-4 text-lg outline-none ring-brass/30 transition focus:ring-4" placeholder="Your full name" />
       </label>
-      <label className="grid gap-2 text-sm font-medium text-espresso">
+      <label className="grid gap-3 text-base font-bold text-espresso">
         Phone number
-        <input name="phone" className="rounded-md border border-espresso/15 bg-crema/40 px-4 py-3 outline-none ring-brass/30 transition focus:ring-4" placeholder="+250..." />
+        <input name="phone" className="rounded-lg border border-espresso/20 bg-crema/40 px-5 py-4 text-lg outline-none ring-brass/30 transition focus:ring-4" placeholder="+250..." />
       </label>
       {requestType === "machine_rental" ? (
-        <label className="grid gap-2 text-sm font-medium text-espresso">
+        <label className="grid gap-3 text-base font-bold text-espresso">
           Duration needed
-          <input name="rentalDuration" className="rounded-md border border-espresso/15 bg-crema/40 px-4 py-3 outline-none ring-brass/30 transition focus:ring-4" placeholder="Daily, weekly, monthly..." />
+          <input name="rentalDuration" className="rounded-lg border border-espresso/20 bg-crema/40 px-5 py-4 text-lg outline-none ring-brass/30 transition focus:ring-4" placeholder="Daily, weekly, monthly..." />
         </label>
       ) : null}
-      <label className="grid gap-2 text-sm font-medium text-espresso">
+      <label className="grid gap-3 text-base font-bold text-espresso">
         Optional message
-        <textarea name="message" rows={4} className="rounded-md border border-espresso/15 bg-crema/40 px-4 py-3 outline-none ring-brass/30 transition focus:ring-4" placeholder="Tell us what you need" />
+        <textarea name="message" rows={4} className="rounded-lg border border-espresso/20 bg-crema/40 px-5 py-4 text-lg outline-none ring-brass/30 transition focus:ring-4" placeholder="Tell us what you need" />
       </label>
-      {error ? <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p> : null}
+      {error ? <p className="rounded-lg bg-red-50 px-4 py-3 text-base text-red-700 font-medium">{error}</p> : null}
       {!supabase ? (
-        <p className="rounded-md bg-brass/10 px-3 py-2 text-xs leading-5 text-espresso/70">
+        <p className="rounded-lg bg-brass/10 px-4 py-3 text-sm leading-relaxed text-espresso/80">
           Supabase is not configured yet, so this demo will open WhatsApp only. Add the anon key in `.env.local` to save requests.
         </p>
       ) : null}
-      <button type="submit" disabled={status === "saving"} className="inline-flex items-center justify-center gap-2 rounded-full bg-roast px-5 py-3 text-sm font-semibold text-white transition hover:bg-espresso disabled:cursor-not-allowed disabled:opacity-60">
-        <MessageCircle size={17} />
-        {status === "saving" ? "Saving request..." : status === "done" ? "Open WhatsApp again" : "Submit and Continue on WhatsApp"}
+      <button type="submit" disabled={status === "saving"} className="inline-flex items-center justify-center gap-3 rounded-full bg-roast px-6 py-4 text-lg font-bold text-white transition hover:bg-espresso disabled:cursor-not-allowed disabled:opacity-60">
+        <MessageCircle size={22} />
+        {status === "saving" ? "Saving..." : status === "done" ? "Open WhatsApp again" : "Send Request on WhatsApp"}
       </button>
     </form>
   );

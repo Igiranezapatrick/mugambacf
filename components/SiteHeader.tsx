@@ -22,7 +22,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm text-crema/80 md:flex">
+        <nav className="hidden items-center gap-8 text-base font-medium text-crema/90 md:flex">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-brass">
               {item.label}
@@ -30,14 +30,14 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <Link href="/products" className="hidden items-center gap-2 rounded-full border border-crema/20 px-4 py-2 text-sm text-crema transition hover:border-brass hover:text-brass sm:flex">
-            <ShoppingBag size={16} />
-            Buy Coffee
+        <div className="flex items-center gap-3">
+          <Link href="/products" className="hidden items-center gap-2 rounded-full border border-crema/25 px-5 py-2.5 text-base font-medium text-crema transition hover:border-brass hover:text-brass sm:flex">
+            <ShoppingBag size={18} />
+            Shop
           </Link>
-          <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-brass px-4 py-2 text-sm font-semibold text-espresso transition hover:bg-crema">
-            <MessageCircle size={16} />
-            WhatsApp
+          <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-brass px-5 py-2.5 text-base font-bold text-espresso transition hover:bg-crema">
+            <MessageCircle size={18} />
+            Contact
           </a>
         </div>
       </div>

@@ -8,9 +8,9 @@ type SectionIntroProps = {
 export function SectionIntro({ eyebrow, title, body, align = "left" }: SectionIntroProps) {
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-roast">{eyebrow}</p>
-      <h2 className="mt-3 font-serif text-4xl leading-tight text-espresso sm:text-5xl">{title}</h2>
-      {body ? <p className="mt-5 text-base leading-8 text-espresso/70">{body}</p> : null}
+      <p className="text-base font-bold uppercase tracking-[0.25em] text-roast">{eyebrow}</p>
+      <h2 className="mt-4 font-serif text-5xl leading-tight text-espresso sm:text-6xl">{title}</h2>
+      {body ? <p className="mt-6 text-lg leading-relaxed text-espresso/80">{body}</p> : null}
     </div>
   );
 }

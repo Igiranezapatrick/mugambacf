@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     images: [{ url: "/media/roastery.jpg", width: 1188, height: 1185 }],
     locale: "en_RW",
     type: "website"
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   }
 };
 

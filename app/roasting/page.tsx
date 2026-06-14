@@ -21,7 +21,7 @@ export default function RoastingPage() {
                 "Service inquiries saved in the admin dashboard for follow-up.",
                 "WhatsApp handoff for quick discussion about volume, timing, and requirements."
               ].map((item) => (
-                <p key={item} className="rounded-lg border border-espresso/10 bg-crema/55 p-4 text-sm leading-6 text-espresso/70">{item}</p>
+                <p key={item} className="rounded-lg border border-espresso/10 bg-crema/55 p-5 text-lg leading-relaxed text-espresso/80">{item}</p>
               ))}
             </div>
           </div>

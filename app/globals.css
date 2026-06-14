@@ -10,12 +10,21 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px; /* Increased base font size for elderly suitability */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 20px; /* Even larger on tablets/desktops */
+  }
 }
 
 body {
   margin: 0;
   background: #f7efe1;
   color: #24130f;
+  line-height: 1.6; /* Improved line height for readability */
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {

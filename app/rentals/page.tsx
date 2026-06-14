@@ -14,7 +14,7 @@ export default function RentalsPage() {
       <section className="bg-espresso py-20 text-crema">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
           <div className="self-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brass">Machine rentals</p>
+            <p className="text-base font-bold uppercase tracking-[0.25em] text-brass">Machine rentals</p>
             <h1 className="mt-3 font-serif text-5xl leading-tight sm:text-6xl">Coffee equipment for events and service periods.</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-crema/76">
               Customers can choose a rental listing, add rental details and duration, save the request in Supabase, and continue on WhatsApp.

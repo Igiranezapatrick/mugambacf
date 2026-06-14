@@ -14,7 +14,7 @@ export default function ProductsPage() {
       <section className="bg-espresso py-20 text-crema">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div className="self-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brass">Coffee products</p>
+            <p className="text-base font-bold uppercase tracking-[0.25em] text-brass">Coffee products</p>
             <h1 className="mt-3 font-serif text-5xl leading-tight sm:text-6xl">Premium Arabica for homes, offices, and cafés.</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-crema/76">
               Whole bean coffee, ground coffee, roasted Arabica, and premium blends can be uploaded by admin and ordered directly through WhatsApp.

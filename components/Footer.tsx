@@ -14,21 +14,24 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-brass">Explore</h3>
-          <div className="mt-5 grid gap-3 text-sm text-crema/75">
-            <Link href="/products" className="hover:text-brass">Coffee products</Link>
-            <Link href="/machines" className="hover:text-brass">Coffee machines</Link>
-            <Link href="/rentals" className="hover:text-brass">Machine rentals</Link>
-            <Link href="/roasting" className="hover:text-brass">Roasting services</Link>
+          <h3 className="text-base font-bold uppercase tracking-[0.2em] text-brass">Explore</h3>
+          <div className="mt-6 grid gap-4 text-base text-crema/85">
+            <Link href="/products" className="hover:text-brass transition">Coffee Products</Link>
+            <Link href="/machines" className="hover:text-brass transition">Coffee Machines</Link>
+            <Link href="/rentals" className="hover:text-brass transition">Machine Rentals</Link>
+            <Link href="/roasting" className="hover:text-brass transition">Roasting Services</Link>
           </div>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-brass">Contact</h3>
-          <div className="mt-5 grid gap-3 text-sm text-crema/75">
-            <span className="flex items-center gap-2"><MapPin size={16} /> Kigali, Rwanda</span>
-            <span className="flex items-center gap-2"><Phone size={16} /> WhatsApp enabled</span>
-            <span className="flex items-center gap-2"><Mail size={16} /> Requests saved in dashboard</span>
-            <a href="#contact" className="flex items-center gap-2 text-brass"><MessageCircle size={16} /> Contact on WhatsApp</a>
+          <h3 className="text-base font-bold uppercase tracking-[0.2em] text-brass">Contact Us</h3>
+          <div className="mt-6 grid gap-4 text-base text-crema/85">
+            <span className="flex items-center gap-3"><MapPin size={20} className="text-brass" /> Kigali, Rwanda</span>
+            <span className="flex items-center gap-3"><Phone size={20} className="text-brass" /> +250 788 123 456</span>
+            <span className="flex items-center gap-3"><Mail size={20} className="text-brass" /> info@mugamba.rw</span>
+            <a href="#contact" className="mt-2 flex items-center gap-3 font-bold text-brass hover:text-crema transition">
+              <MessageCircle size={20} /> 
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
