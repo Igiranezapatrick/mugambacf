@@ -10,12 +10,12 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 18px; /* Increased base font size for elderly suitability */
+  font-size: 18px; /* Base font size for elderly suitability */
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 20px; /* Even larger on tablets/desktops */
+    font-size: 20px; /* Larger on tablets/desktops */
   }
 }
 
@@ -23,8 +23,25 @@ body {
   margin: 0;
   background: #f7efe1;
   color: #24130f;
-  line-height: 1.6; /* Improved line height for readability */
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Sharp corner utility to override rounded corners globally where needed */
+.sharp-ui {
+  border-radius: 0 !important;
+}
+
+/* Slightly softened corners for a professional look, but not "modern round" */
+.corner-soft {
+  border-radius: 2px !important;
+}
+
+@media (max-width: 640px) {
+  .mobile-px {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 ::selection {

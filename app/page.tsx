@@ -13,45 +13,45 @@ import { services, trustPoints } from "@/lib/static-data";
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-espresso text-crema">
+      <section className="relative min-h-[calc(100vh-6rem)] overflow-hidden bg-espresso text-crema">
         <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline poster="/media/roastery.jpg">
           <source src="/media/hero.mp4" type="video/mp4" />
         </video>
         <div className="hero-mask absolute inset-0" />
-        <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl content-center px-4 py-16 sm:px-6 lg:px-8">
+        <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl content-center px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <p className="text-base font-bold uppercase tracking-[0.3em] text-brass">Kigali · Rwanda Arabica · Coffee expertise</p>
-            <h1 className="mt-8 font-serif text-6xl leading-[1] sm:text-8xl lg:text-9xl">Mugamba Coffee Factory</h1>
-            <p className="mt-8 max-w-2xl text-xl leading-relaxed text-crema/90">
+            <p className="text-base font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica · Coffee expertise</p>
+            <h1 className="mt-8 font-serif text-5xl leading-[1.1] sm:text-7xl lg:text-9xl tracking-tight">Mugamba Coffee Factory</h1>
+            <p className="mt-10 max-w-2xl text-xl leading-relaxed text-crema/85 border-l-4 border-brass pl-6">
               Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/products" className="inline-flex items-center gap-3 rounded-full bg-brass px-8 py-4 text-lg font-bold text-espresso transition hover:bg-crema">
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link href="/products" className="inline-flex items-center gap-4 bg-brass px-10 py-5 text-lg font-bold uppercase tracking-widest text-espresso transition hover:bg-crema">
                 <ShoppingBag size={22} /> Buy Coffee
               </Link>
-              <Link href="/rentals" className="inline-flex items-center gap-3 rounded-full border border-crema/30 px-8 py-4 text-lg font-bold text-crema transition hover:border-brass hover:text-brass">
-                Rent Machine
+              <Link href="/rentals" className="inline-flex items-center gap-4 border-2 border-crema/40 bg-transparent px-10 py-5 text-lg font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
+                Rentals
               </Link>
-              <a href="#contact" className="inline-flex items-center gap-3 rounded-full border border-crema/30 px-8 py-4 text-lg font-bold text-crema transition hover:border-brass hover:text-brass">
-                <MessageCircle size={22} /> Contact Us
+              <a href="#contact" className="inline-flex items-center gap-4 border-2 border-crema/40 bg-transparent px-10 py-5 text-lg font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
+                <MessageCircle size={22} /> Contact
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-crema py-20">
+      <section className="bg-crema py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionIntro eyebrow="Featured services" title="A complete premium coffee platform" body="Mugamba combines coffee craft, equipment access, and fast WhatsApp communication so buyers can move from interest to conversation quickly." />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <MotionReveal key={service.title} delay={index * 0.06}>
-                  <Link href={service.href} className="block h-full rounded-lg border border-espresso/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
-                    <Icon className="text-roast" size={28} />
-                    <h3 className="mt-5 font-serif text-2xl text-espresso">{service.title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-espresso/65">{service.description}</p>
+                  <Link href={service.href} className="block h-full border border-espresso/15 bg-white p-8 transition hover:border-brass/40 hover:shadow-lg">
+                    <Icon className="text-roast" size={36} />
+                    <h3 className="mt-8 font-serif text-2xl text-espresso tracking-tight">{service.title}</h3>
+                    <p className="mt-4 text-base leading-relaxed text-espresso/70">{service.description}</p>
                   </Link>
                 </MotionReveal>
               );
@@ -60,28 +60,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div className="relative min-h-[520px] overflow-hidden rounded-lg bg-espresso/5">
-  <Image 
-    src="/media/factory.jpg" 
-    alt="Mugamba Coffee Factory coffee bar and machines" 
-    fill 
-    priority // <-- Forces Next.js to preload this above-the-fold image
-    sizes="(min-width: 1024px) 45vw, 100vw" 
-    className="object-cover z-10" // <-- Ensures the image stacks correctly
-  />
-</div>
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="relative min-h-[500px] bg-espresso/5">
+            <Image 
+              src="/media/factory.jpg" 
+              alt="Mugamba Coffee Factory coffee bar and machines" 
+              fill 
+              priority 
+              sizes="(min-width: 1024px) 50vw, 100vw" 
+              className="object-cover"
+            />
+          </div>
           <div className="self-center">
-            <SectionIntro eyebrow="About Mugamba coffee" title="Roasted with care, served with business discipline" body="The brand experience is built around quality Arabica coffee, precise roasting, reliable coffee machines, and a clear request process for every buyer." />
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <SectionIntro eyebrow="About Mugamba coffee" title="Roasted with care, served with discipline" body="The brand experience is built around quality Arabica coffee, precise roasting, reliable coffee machines, and a clear request process for every buyer." />
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {trustPoints.map((point) => {
                 const Icon = point.icon;
                 return (
-                  <div key={point.title} className="rounded-lg border border-espresso/10 bg-crema/55 p-5">
-                    <Icon className="text-sage" size={24} />
-                    <h3 className="mt-4 font-semibold text-espresso">{point.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-espresso/65">{point.body}</p>
+                  <div key={point.title} className="border border-espresso/10 bg-crema/20 p-6">
+                    <Icon className="text-sage" size={28} />
+                    <h3 className="mt-6 font-bold uppercase tracking-wider text-espresso">{point.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-espresso/65">{point.body}</p>
                   </div>
                 );
               })}
@@ -90,38 +90,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-crema py-20">
+      <section className="bg-crema py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionIntro eyebrow="Featured products" title="Coffee and machines managed by admin" body="Products uploaded in the admin dashboard appear here automatically, with request buttons that save the customer lead and open WhatsApp." />
-            <Link href="/products" className="inline-flex items-center gap-2 rounded-full border border-espresso/15 px-5 py-3 text-sm font-semibold text-espresso hover:border-roast hover:text-roast">
-              View coffee <ArrowRight size={16} />
+          <div className="flex flex-wrap items-end justify-between gap-8">
+            <SectionIntro eyebrow="Featured products" title="Coffee and machines" body="Products uploaded in the admin dashboard appear here automatically, with request buttons that save the customer lead and open WhatsApp." />
+            <Link href="/products" className="inline-flex items-center gap-3 border-2 border-espresso/15 px-8 py-4 text-base font-bold uppercase tracking-widest text-espresso hover:border-roast hover:text-roast transition">
+              View All <ArrowRight size={20} />
             </Link>
           </div>
-          <div className="mt-10">
+          <div className="mt-16">
             <DynamicCatalog featuredOnly limit={6} />
           </div>
         </div>
       </section>
 
-      <section className="noise bg-espresso py-20 text-crema">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brass">Coffee experience</p>
-            <h2 className="mt-3 font-serif text-4xl leading-tight sm:text-5xl">International polish, Rwandan coffee character.</h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-crema/72">
+      <section className="noise bg-espresso py-24 sm:py-32 text-crema">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="self-center">
+            <p className="text-base font-bold uppercase tracking-[0.4em] text-brass">Coffee experience</p>
+            <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-6xl tracking-tight">International polish, Rwandan character.</h2>
+            <p className="mt-8 text-xl leading-relaxed text-crema/70 border-l-4 border-brass pl-6">
               The site is designed for quick ordering, visible contact paths, structured product management, and SEO around Kigali coffee, Rwanda Arabica, roasting, and machine rentals.
             </p>
           </div>
-          <div className="relative min-h-[360px] overflow-hidden rounded-lg">
-            <Image src="/media/latte.jpg" alt="Premium Mugamba coffee cup" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+          <div className="relative min-h-[400px] border border-white/10">
+            <Image src="/media/latte.jpg" alt="Premium Mugamba coffee cup" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionIntro align="center" eyebrow="Testimonials" title="Built for trust before the first message" body="The admin can add real customer reviews as the business gathers more proof from buyers, offices, cafés, and event clients." />
+          <SectionIntro align="center" eyebrow="Testimonials" title="Built for trust" body="The admin can add real customer reviews as the business gathers more proof from buyers, offices, cafés, and event clients." />
           <Testimonials />
         </div>
       </section>
