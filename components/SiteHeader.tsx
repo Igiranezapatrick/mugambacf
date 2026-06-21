@@ -77,13 +77,13 @@ export function SiteHeader() {
           <div className="flex items-center gap-3">
             <Link href="/products" className={`hidden items-center gap-2 border bg-transparent font-semibold uppercase tracking-widest transition-all duration-300 lg:flex ${
               isSolid 
-                ? "border-espresso/20 text-espresso px-3.5 py-1.5 text-[11px] hover:bg-espresso hover:text-white" 
-                : "border-crema/25 text-crema px-4 py-2 text-xs hover:bg-crema hover:text-espresso"
+                ? "border-espresso/20 text-espresso px-3.5 py-1.5 text-[11px] hover:bg-espresso hover:text-white shadow-[3px_3px_0px_0px_#24130f]" 
+                : "border-crema/25 text-crema px-4 py-2 text-xs hover:bg-crema hover:text-espresso shadow-[3px_3px_0px_0px_rgba(247,239,225,0.25)]"
             }`}>
               <ShoppingBag size={isSolid ? 14 : 16} />
               Shop
             </Link>
-            <a href="#contact" className={`hidden items-center gap-2 bg-brass font-semibold uppercase tracking-widest transition-all duration-300 sm:flex ${
+            <a href="#contact" className={`hidden items-center gap-2 bg-brass font-semibold uppercase tracking-widest transition-all duration-300 sm:flex shadow-[3px_3px_0px_0px_#24130f] ${
               isSolid 
                 ? "text-espresso hover:bg-espresso hover:text-crema px-3.5 py-1.5 text-[11px]" 
                 : "text-espresso hover:bg-crema hover:text-espresso px-4 py-2 text-xs"
@@ -121,14 +121,14 @@ export function SiteHeader() {
             <div className="mt-3 flex w-full flex-col gap-3">
               <Link 
                 href="/products" 
-                className="flex items-center justify-center gap-2 border border-espresso/20 py-2.5 text-xs font-semibold uppercase tracking-widest text-espresso hover:bg-espresso hover:text-white transition"
+                className="flex items-center justify-center gap-2 border border-espresso/20 py-2.5 text-xs font-semibold uppercase tracking-widest text-espresso hover:bg-espresso hover:text-white transition shadow-[3px_3px_0px_0px_#24130f]"
                 onClick={() => setIsOpen(false)}
               >
                 <ShoppingBag size={14} /> Shop
               </Link>
               <a 
                 href="#contact" 
-                className="flex items-center justify-center gap-2 bg-brass py-2.5 text-xs font-semibold uppercase tracking-widest text-espresso hover:bg-espresso hover:text-crema transition"
+                className="flex items-center justify-center gap-2 bg-brass py-2.5 text-xs font-semibold uppercase tracking-widest text-espresso hover:bg-espresso hover:text-crema transition shadow-[3px_3px_0px_0px_#24130f]"
                 onClick={() => setIsOpen(false)}
               >
                 <MessageCircle size={14} /> Contact
