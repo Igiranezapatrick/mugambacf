@@ -125,10 +125,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-crema py-16 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 sm:gap-16 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div className="space-y-8">
+      <section id="contact" className="bg-crema py-12 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 sm:gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+          <div className="space-y-6">
             <SectionIntro
+              eyebrowSize="text-[10px] sm:text-xs"
+              titleSize="text-2xl sm:text-4xl"
+              bodySize="text-sm sm:text-base"
               eyebrow="Get in touch"
               title="Visit Kigali factory"
               body="Reach out to us via phone or email, or visit our factory in Gikondo. We are ready to assist with all your coffee needs." 
