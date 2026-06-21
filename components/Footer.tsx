@@ -4,7 +4,7 @@ import { Mail, MapPin, MessageCircle, Phone, Lock } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-espresso text-crema border-t border-white/5">
+    <footer className="bg-espresso text-crema">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
         <div className="space-y-6">
           <Link href="/" className="inline-block">
