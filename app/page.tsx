@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { FindUs } from "@/components/FindUs";
 import { services, trustPoints } from "@/lib/static-data";
 import { HeroAnimation } from "@/components/HeroAnimation";
+import { SlideFromLeft } from "@/components/SlideFromLeft";
 
 
 export default function Home() {
