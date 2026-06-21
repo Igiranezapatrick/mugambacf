@@ -82,7 +82,9 @@ export default function Home() {
             />
           </div>
           <div className="self-center">
-            <SectionIntro eyebrow="About Mugamba" title="Roasted with care" body="The brand experience is built around quality Arabica coffee, precise roasting, reliable coffee machines, and a clear request process for every buyer." />
+            <SlideFromLeft>
+              <SectionIntro bodyClassName="text" eyebrow="About Mugamba" title="Roasted with care" body="The brand experience is built around quality Arabica coffee, precise roasting, reliable coffee machines, and a clear request process for every buyer." />
+            </SlideFromLeft>
           </div>
         </div>
       </section>
