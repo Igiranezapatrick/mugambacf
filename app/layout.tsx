@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mugamba.rw";
 
 
 export const metadata: Metadata = {
