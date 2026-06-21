@@ -102,3 +102,22 @@ video {
   scrollbar-width: thin;
   scrollbar-color: #24130f #f7efe1;
 }
+
+/* Custom themed scrollbar when over dark sections (making it light mode) */
+html.scrollbar-light ::-webkit-scrollbar-track {
+  background: #24130f; /* dark espresso track */
+}
+
+html.scrollbar-light ::-webkit-scrollbar-thumb {
+  background: #f7efe1; /* light crema thumb */
+  border: 2px solid #24130f;
+}
+
+html.scrollbar-light ::-webkit-scrollbar-thumb:hover {
+  background: #c99a4a; /* brass hover thumb */
+}
+
+/* Firefox scrollbar styling for dark sections */
+html.scrollbar-light {
+  scrollbar-color: #f7efe1 #24130f;
+}
