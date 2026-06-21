@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl border border-espresso/10 bg-white/90 text-espresso shadow-soft backdrop-blur-md">
       <div className="mx-auto flex h-16 items-center justify-between px-6 sm:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="Mugamba Coffee Factory home">
-          <Image src="/media/logo.jpg" alt="Mugamba Coffee Factory logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover" priority />
+          <Image src="/logo/logo.png" alt="Mugamba Coffee Factory logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover" priority />
           <span className="leading-tight text-espresso">
             <span className="block font-serif text-base tracking-tight">Mugamba</span>
             <span className="block text-[9px] font-bold uppercase tracking-[0.3em] text-brass">Coffee Factory</span>
