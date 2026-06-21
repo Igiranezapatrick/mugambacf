@@ -44,7 +44,7 @@ export default function Home() {
       <section className="bg-crema py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-            <div className="self-start">
+            <div className="self-center">
               <SectionIntro eyebrow="Featured services" title="A complete premium platform" body="Mugamba combines coffee craft, equipment access, and fast WhatsApp communication so buyers can move from interest to conversation quickly." />
             </div>
             <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
