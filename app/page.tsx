@@ -82,18 +82,6 @@ export default function Home() {
           </div>
           <div className="self-center">
             <SectionIntro eyebrow="About Mugamba" title="Roasted with care" body="The brand experience is built around quality Arabica coffee, precise roasting, reliable coffee machines, and a clear request process for every buyer." />
-            <div className="mt-10 sm:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2">
-              {trustPoints.map((point) => {
-                const Icon = point.icon;
-                return (
-                  <div key={point.title} className="border border-espresso/10 bg-crema/20 p-5 sm:p-6">
-                    <Icon className="text-sage" size={24} />
-                    <h3 className="mt-4 sm:mt-6 font-bold uppercase tracking-wider text-espresso text-sm sm:text-base">{point.title}</h3>
-                    <p className="mt-2 sm:mt-3 text-sm sm:text-base leading-relaxed text-espresso/65">{point.body}</p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>
