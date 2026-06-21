@@ -26,7 +26,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       const element = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
       if (!element) return;
       
-      const isDark = element.closest('.bg-espresso') || element.closest('.bg-[#24130f]') || element.closest('.noise');
+      const isDark = element.closest('.bg-espresso') || element.closest('.noise');
       if (isDark) {
         document.documentElement.classList.add('scrollbar-light');
       } else {
