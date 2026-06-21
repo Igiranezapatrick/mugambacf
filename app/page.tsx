@@ -93,7 +93,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-6 sm:gap-8">
             <SectionIntro eyebrowSize="text-[10px] sm:text-xs" titleSize="text-3xl sm:text-5xl" bodySize="text-sm sm:text-base" eyebrow="Featured products" title="Coffee and machines" body="Products uploaded in the admin dashboard appear here automatically, with request buttons that save the customer lead." />
-            <Link href="/products" className="inline-flex items-center gap-2 border-2 border-espresso/15 px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso hover:border-roast hover:text-roast transition">
+            <Link href="/products" className="inline-flex items-center gap-2 border-2 border-espresso bg-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a] hover:border-brass hover:text-brass">
               View All <ArrowRight size={18} />
             </Link>
           </div>
