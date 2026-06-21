@@ -10,6 +10,7 @@
 
 html {
   font-size: 16px; /* Reduced mobile base font size */
+  overflow-y: scroll; /* Forces vertical scrollbar to be always visible */
 }
 
 @media (min-width: 768px) {
