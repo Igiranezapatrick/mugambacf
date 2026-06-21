@@ -105,7 +105,7 @@ export function RequestForm({ requestType, product, compact = false, onClose }: 
           </p>
         ) : null}
       </div>
-      <button type="submit" disabled={status === "saving"} className={compact ? "inline-flex items-center justify-center gap-2.5 bg-roast px-6 py-3.5 text-sm sm:text-base font-bold uppercase tracking-widest text-white transition hover:bg-espresso disabled:cursor-not-allowed disabled:opacity-60" : "mt-auto inline-flex w-full items-center justify-center gap-2.5 bg-roast px-6 py-4 text-base font-bold uppercase tracking-widest text-white transition hover:bg-espresso disabled:cursor-not-allowed disabled:opacity-60"}>
+      <button type="submit" disabled={status === "saving"} className={compact ? "inline-flex items-center justify-center gap-2.5 bg-roast px-6 py-3.5 text-sm sm:text-base font-bold uppercase tracking-widest text-white transition hover:bg-espresso disabled:cursor-not-allowed disabled:opacity-60" : "mt-auto inline-flex w-full items-center justify-center gap-2.5 bg-espresso px-6 py-4 text-base font-bold uppercase tracking-widest text-crema transition hover:bg-roast active:bg-espresso disabled:cursor-not-allowed disabled:opacity-60"}>
         <MessageCircle size={20} />
         {status === "saving" ? "Saving..." : status === "done" ? "WhatsApp (Open Again)" : "Submit & Continue"}
       </button>
