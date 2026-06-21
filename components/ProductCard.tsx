@@ -64,7 +64,7 @@ export function ProductCard({ product, onRequest }: ProductCardProps) {
         </div>
         <button
           onClick={() => onRequest(product, requestType)}
-          className="mt-auto inline-flex w-full items-center justify-center gap-2 sm:gap-3 bg-espresso px-4 py-3 sm:px-6 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:bg-roast active:bg-espresso"
+          className="mt-auto inline-flex w-full items-center justify-center gap-2 sm:gap-3 bg-espresso px-4 py-3 sm:px-6 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 shadow-[4px_4px_0px_0px_#24130f] hover:scale-[1.03] hover:shadow-[5px_5px_0px_0px_#c99a4a] hover:bg-roast active:bg-espresso"
         >
           <MessageCircle size={18} />
           {product.product_type === "machine" ? "Purchase" : product.product_type === "rental" ? "Rental" : "Order"}
