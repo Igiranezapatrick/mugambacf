@@ -92,7 +92,7 @@ export default function Home() {
       <section className="bg-crema py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-6 sm:gap-8">
-            <SectionIntro eyebrow="Featured products" title="Coffee and machines" body="Products uploaded in the admin dashboard appear here automatically, with request buttons that save the customer lead." />
+            <SectionIntro eyebrowSize="text-[10px] sm:text-xs" titleSize="text-2xl sm:text-4xl" bodySize="text-sm sm:text-base" eyebrow="Featured products" title="Coffee and machines" body="Products uploaded in the admin dashboard appear here automatically, with request buttons that save the customer lead." />
             <Link href="/products" className="inline-flex items-center gap-2 border-2 border-espresso/15 px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso hover:border-roast hover:text-roast transition">
               View All <ArrowRight size={18} />
             </Link>
