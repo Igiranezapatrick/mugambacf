@@ -17,7 +17,6 @@ export default function Home() {
         <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline>
           <source src="/media/hero.mp4" type="video/mp4" />
         </video>
-        <div className="hero-mask absolute inset-0" />
         <div className="relative mx-auto grid min-h-screen max-w-7xl content-center px-4 pt-28 pb-12 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <p className="text-sm sm:text-base font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica</p>
