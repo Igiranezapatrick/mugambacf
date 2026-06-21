@@ -66,7 +66,7 @@ export function RequestForm({ requestType, product, compact = false, onClose }: 
   }
 
   return (
-    <form onSubmit={submit} className={compact ? "grid gap-4" : "grid gap-4 border border-espresso/15 bg-white p-6 shadow-lg"}>
+    <form onSubmit={submit} className={compact ? "grid gap-4" : "grid gap-4 border-x border-b border-t-0 border-espresso/15 bg-white p-6 shadow-lg"}>
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-roast">{requestLabel(requestType)}</p>
