@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <section className="relative min-h-[calc(100vh-6rem)] overflow-hidden bg-espresso text-crema">
-        <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline poster="/media/roastery.jpg">
+        <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline>
           <source src="/media/hero.mp4" type="video/mp4" />
         </video>
         <div className="hero-mask absolute inset-0" />
