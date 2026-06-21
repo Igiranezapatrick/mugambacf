@@ -32,7 +32,7 @@ export function SiteHeader() {
   const isSolid = isScrolled || isOpen;
 
   return (
-    <header className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl border transition-all duration-300 backdrop-blur-md ${
+    <header className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl border transition-all duration-300 ${
       isSolid 
         ? "border-espresso/10 bg-white/90 text-espresso shadow-soft" 
         : "border-transparent bg-transparent text-crema"
@@ -84,7 +84,7 @@ export function SiteHeader() {
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div className="absolute left-0 right-0 top-[72px] w-full border border-espresso/10 bg-white/95 py-6 shadow-2xl backdrop-blur-md md:hidden">
+        <div className="absolute left-0 right-0 top-[72px] w-full border border-espresso/10 bg-white/95 py-6 shadow-2xl md:hidden">
           <nav className="flex flex-col items-center gap-5 px-4">
             {nav.map((item) => (
               <Link 
