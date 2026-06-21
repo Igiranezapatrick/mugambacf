@@ -27,13 +27,13 @@ export default function Home() {
               Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
             </p>
             <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
-              <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition hover:bg-crema">
+              <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition hover:bg-crema shadow-[4px_4px_0px_0px_#24130f]">
                 <ShoppingBag size={16} /> Buy Coffee
               </Link>
-              <Link href="/rentals" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
+              <Link href="/rentals" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)]">
                 Rentals
               </Link>
-              <a href="#contact" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
+              <a href="#contact" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)]">
                 <MessageCircle size={16} /> Contact
               </a>
             </div>
