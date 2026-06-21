@@ -16,13 +16,13 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-espresso/10 bg-white text-espresso backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-4" aria-label="Mugamba Coffee Factory home">
-          <Image src="/media/logo.jpg" alt="Mugamba Coffee Factory logo" width={56} height={56} className="h-14 w-14 rounded-full object-cover" priority />
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl rounded-full border border-espresso/10 bg-white/90 text-espresso shadow-soft backdrop-blur-md">
+      <div className="mx-auto flex h-16 items-center justify-between px-6 sm:px-8">
+        <Link href="/" className="flex items-center gap-3" aria-label="Mugamba Coffee Factory home">
+          <Image src="/media/logo.jpg" alt="Mugamba Coffee Factory logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover" priority />
           <span className="leading-tight text-espresso">
-            <span className="block font-serif text-lg tracking-tight">Mugamba</span>
-            <span className="block text-[10px] font-bold uppercase tracking-[0.3em] text-brass">Coffee Factory</span>
+            <span className="block font-serif text-base tracking-tight">Mugamba</span>
+            <span className="block text-[9px] font-bold uppercase tracking-[0.3em] text-brass">Coffee Factory</span>
           </span>
         </Link>
 
@@ -58,7 +58,7 @@ export function SiteHeader() {
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div className="absolute left-0 top-20 w-full border-b border-espresso/10 bg-white py-6 shadow-2xl md:hidden">
+        <div className="absolute left-0 right-0 top-[72px] w-full rounded-2xl border border-espresso/10 bg-white/95 py-6 shadow-2xl backdrop-blur-md md:hidden">
           <nav className="flex flex-col items-center gap-5 px-4">
             {nav.map((item) => (
               <Link 

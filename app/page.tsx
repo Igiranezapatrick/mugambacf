@@ -13,12 +13,12 @@ import { services, trustPoints } from "@/lib/static-data";
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-[calc(100vh-6rem)] overflow-hidden bg-espresso text-crema">
+      <section className="relative min-h-screen overflow-hidden bg-espresso text-crema">
         <video className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline>
           <source src="/media/hero.mp4" type="video/mp4" />
         </video>
         <div className="hero-mask absolute inset-0" />
-        <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl content-center px-4 py-12 sm:px-6 lg:px-8">
+        <div className="relative mx-auto grid min-h-screen max-w-7xl content-center px-4 pt-28 pb-12 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <p className="text-sm sm:text-base font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica</p>
             <h1 className="mt-6 sm:mt-8 font-serif text-4xl leading-[1.1] sm:text-7xl lg:text-9xl tracking-tight">Mugamba Coffee Factory</h1>
