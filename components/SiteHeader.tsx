@@ -16,7 +16,7 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl rounded-full border border-espresso/10 bg-white/90 text-espresso shadow-soft backdrop-blur-md">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl border border-espresso/10 bg-white/90 text-espresso shadow-soft backdrop-blur-md">
       <div className="mx-auto flex h-16 items-center justify-between px-6 sm:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="Mugamba Coffee Factory home">
           <Image src="/media/logo.jpg" alt="Mugamba Coffee Factory logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover" priority />
@@ -58,7 +58,7 @@ export function SiteHeader() {
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div className="absolute left-0 right-0 top-[72px] w-full rounded-2xl border border-espresso/10 bg-white/95 py-6 shadow-2xl backdrop-blur-md md:hidden">
+        <div className="absolute left-0 right-0 top-[72px] w-full border border-espresso/10 bg-white/95 py-6 shadow-2xl backdrop-blur-md md:hidden">
           <nav className="flex flex-col items-center gap-5 px-4">
             {nav.map((item) => (
               <Link 
