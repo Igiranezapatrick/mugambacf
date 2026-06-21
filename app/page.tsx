@@ -43,20 +43,24 @@ export default function Home() {
 
       <section className="bg-crema py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionIntro align="center" eyebrow="Featured services" title="A complete premium platform" body="Mugamba combines coffee craft, equipment access, and fast WhatsApp communication so buyers can move from interest to conversation quickly." />
-          <div className="mt-12 sm:mt-16 grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <MotionReveal key={service.title} delay={index * 0.06}>
-                  <Link href={service.href} className="block h-full border border-espresso/15 bg-white p-6 sm:p-8 transition hover:border-brass/40 hover:shadow-lg">
-                    <Icon className="text-roast" size={32} />
-                    <h3 className="mt-6 sm:mt-8 font-serif text-xl sm:text-2xl text-espresso tracking-tight">{service.title}</h3>
-                    <p className="mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-espresso/70">{service.description}</p>
-                  </Link>
-                </MotionReveal>
-              );
-            })}
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+            <div className="self-start">
+              <SectionIntro eyebrow="Featured services" title="A complete premium platform" body="Mugamba combines coffee craft, equipment access, and fast WhatsApp communication so buyers can move from interest to conversation quickly." />
+            </div>
+            <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <MotionReveal key={service.title} delay={index * 0.06}>
+                    <Link href={service.href} className="block h-full border border-espresso/15 bg-white p-6 sm:p-8 transition hover:border-brass/40 hover:shadow-lg">
+                      <Icon className="text-roast" size={32} />
+                      <h3 className="mt-6 sm:mt-8 font-serif text-xl sm:text-2xl text-espresso tracking-tight">{service.title}</h3>
+                      <p className="mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-espresso/70">{service.description}</p>
+                    </Link>
+                  </MotionReveal>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
