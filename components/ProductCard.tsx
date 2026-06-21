@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import type { Product, RequestType } from "@/lib/types";
@@ -18,11 +19,24 @@ function requestTypeFor(product: Product): RequestType {
 export function ProductCard({ product, onRequest }: ProductCardProps) {
   const image = product.image_url || "/media/latte.jpg";
   const requestType = requestTypeFor(product);
+  const [imageLoading, setImageLoading] = useState(true);
 
   return (
     <article className="flex flex-col h-full group overflow-hidden border border-espresso/15 bg-white shadow-sm transition hover:shadow-md">
       <div className="relative aspect-[4/3] overflow-hidden bg-espresso/5">
-        <Image src={image} alt={product.name} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
+        {imageLoading && (
+          <div className="absolute inset-0 animate-pulse bg-espresso/10" />
+        )}
+        <Image
+          src={image}
+          alt={product.name}
+          fill
+          sizes="(min-width: 1024px) 33vw, 100vw"
+          className={`object-cover transition duration-500 ${
+            imageLoading ? "scale-95 blur-sm grayscale opacity-0" : "scale-100 blur-0 grayscale-0 opacity-100 group-hover:scale-105"
+          }`}
+          onLoad={() => setImageLoading(false)}
+        />
         {product.category ? (
           <span className="absolute left-0 top-4 bg-brass px-3 py-1 text-xs font-bold uppercase tracking-wider text-espresso">{product.category}</span>
         ) : null}
