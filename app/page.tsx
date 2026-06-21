@@ -52,7 +52,7 @@ export default function Home() {
                 const Icon = service.icon;
                 return (
                   <MotionReveal key={service.title} delay={index * 0.06}>
-                    <Link href={service.href} className="block h-full border border-espresso/15 bg-white p-6 sm:p-8 transition hover:border-brass/40 hover:shadow-lg">
+                    <Link href={service.href} className="block h-full border border-espresso/15 bg-white p-6 sm:p-8 transition-all duration-300 shadow-[4px_4px_0px_0px_#24130f] hover:scale-[1.03] hover:shadow-[6px_6px_0px_0px_#c99a4a] hover:border-brass/40">
                       <Icon className="text-roast" size={32} />
                       <h3 className="mt-6 sm:mt-8 font-serif text-xl sm:text-2xl text-espresso tracking-tight">{service.title}</h3>
                       <p className="mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-espresso/70">{service.description}</p>
