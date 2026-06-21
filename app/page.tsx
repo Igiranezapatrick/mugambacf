@@ -45,7 +45,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
             <div className="self-center">
-              <SectionIntro eyebrow="Featured services" title="A complete premium platform" body="Mugamba combines coffee craft, equipment access, and fast WhatsApp communication so buyers can move from interest to conversation quickly." />
+              <SectionIntro titleSize="text-2xl sm:text-5xl" eyebrow="Featured services" title="A complete premium platform" body="Mugamba combines coffee craft, equipment access, and fast WhatsApp communication so buyers can move from interest to conversation quickly." />
             </div>
             <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
               {services.map((service, index) => {
