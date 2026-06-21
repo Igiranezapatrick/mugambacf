@@ -39,6 +39,12 @@ export function AdminDashboard() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [contentBlocks, setContentBlocks] = useState<ContentBlock[]>([]);
   const [editing, setEditing] = useState<Product | null>(null);
+  const [selectedFileName, setSelectedFileName] = useState("");
+
+  useEffect(() => {
+    setSelectedFileName("");
+    setMessage("");
+  }, [editing]);
 
   const stats = useMemo(() => {
     const pending = requests.filter((request) => request.status === "pending").length;
@@ -146,6 +152,7 @@ export function AdminDashboard() {
     let imageUrl = String(form.get("image_url") || "").trim();
 
     if (file && file.size > 0) {
+      setMessage("Uploading image to storage...");
       const extension = file.name.split(".").pop() || "jpg";
       const path = `${Date.now()}-${slug}.${extension}`;
       const { error: uploadError } = await supabase.storage.from("product-images").upload(path, file, { upsert: true });
@@ -200,6 +207,7 @@ export function AdminDashboard() {
     (event.currentTarget as HTMLFormElement).reset();
     await loadDashboard();
     setMessage("Product saved.");
+    setSelectedFileName("");
   }
 
   async function deleteProduct(id: string) {
@@ -355,10 +363,22 @@ export function AdminDashboard() {
             </div>
             <textarea name="specsText" defaultValue={values.specsText} rows={3} className="rounded-md border border-espresso/15 px-4 py-3" placeholder={"Specs, one per line\nPower: 220V\nUse: Commercial"} />
             <input name="image_url" defaultValue={values.image_url} className="rounded-md border border-espresso/15 px-4 py-3" placeholder="Image URL, optional" />
-            <label className="flex cursor-pointer items-center gap-2 rounded-md border border-dashed border-espresso/25 px-4 py-3 text-sm text-espresso/70">
+            <label className="flex cursor-pointer items-center gap-2 rounded-md border border-dashed border-espresso/25 px-4 py-3 text-sm text-espresso/70 hover:border-brass transition">
               <ImagePlus size={18} /> Upload product image
-              <input name="image" type="file" accept="image/*" className="hidden" />
+              <input name="image" type="file" accept="image/*" className="hidden" onChange={(e) => {
+                const file = e.target.files?.[0];
+                if (file) {
+                  setSelectedFileName(file.name);
+                } else {
+                  setSelectedFileName("");
+                }
+              }} />
             </label>
+            {selectedFileName ? (
+              <p className="text-xs font-semibold text-roast bg-crema/40 px-3 py-2 border border-dashed border-brass/35 rounded">
+                Selected: {selectedFileName}
+              </p>
+            ) : null}
             <label className="flex items-center gap-2 text-sm text-espresso"><input name="is_featured" type="checkbox" defaultChecked={values.is_featured} /> Featured</label>
             <label className="flex items-center gap-2 text-sm text-espresso"><input name="is_active" type="checkbox" defaultChecked={values.is_active} /> Active</label>
             <div className="flex gap-2">

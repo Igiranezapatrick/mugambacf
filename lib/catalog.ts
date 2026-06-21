@@ -1,12 +1,11 @@
-import { fallbackProducts, fallbackTestimonials } from "./static-data";
+import { fallbackTestimonials } from "./static-data";
 import { supabase } from "./supabase";
 import type { Product, ProductType, Testimonial } from "./types";
 
 export async function fetchProducts(productType?: ProductType, featuredOnly = false): Promise<Product[]> {
   if (!supabase) {
-    return fallbackProducts.filter((product) => {
-      return (!productType || product.product_type === productType) && (!featuredOnly || product.is_featured);
-    });
+    console.warn("Supabase is not configured. Returning empty product list.");
+    return [];
   }
 
   let query = supabase
@@ -16,17 +15,33 @@ export async function fetchProducts(productType?: ProductType, featuredOnly = fa
     .order("sort_order", { ascending: true })
     .order("created_at", { ascending: false });
 
-  if (productType) query = query.eq("product_type", productType);
   if (featuredOnly) query = query.eq("is_featured", true);
 
   const { data, error } = await query;
-  if (error || !data?.length) {
-    return fallbackProducts.filter((product) => {
-      return (!productType || product.product_type === productType) && (!featuredOnly || product.is_featured);
-    });
+  if (error) {
+    console.error("Error fetching products from database:", error);
+    return [];
   }
 
-  return data as Product[];
+  const allProducts = (data || []) as Product[];
+
+  if (!productType) {
+    return allProducts;
+  }
+
+  return allProducts.filter((product) => {
+    const categoryLower = (product.category || "").toLowerCase().trim();
+    const isCoffee = categoryLower === "coffe" || categoryLower === "coffee";
+
+    if (productType === "coffee") {
+      return isCoffee;
+    }
+    if (productType === "rental" || productType === "machine") {
+      return !isCoffee;
+    }
+
+    return true;
+  });
 }
 
 export async function fetchTestimonials(): Promise<Testimonial[]> {

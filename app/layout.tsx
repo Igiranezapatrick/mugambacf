@@ -29,17 +29,15 @@ export const metadata: Metadata = {
     images: [{ url: "/media/roastery.jpg", width: 1188, height: 1185 }],
     locale: "en_RW",
     type: "website"
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
   }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body>
         <SiteHeader />
         {children}

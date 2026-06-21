@@ -41,8 +41,7 @@ export function FindUs() {
         <div>
           <h4 className="text-xl font-bold uppercase tracking-tight text-espresso">Call Us</h4>
           <p className="mt-3 text-base text-espresso/80 leading-relaxed font-bold">
-            <a href="tel:+250788123456" className="block hover:text-roast transition">+250 788 123 456</a>
-            <a href="tel:+250788654321" className="block mt-1 hover:text-roast transition">+250 788 654 321</a>
+            <a href="tel:+250787793722" className="block hover:text-roast transition">+250 787 793 722</a>
           </p>
         </div>
       </div>
@@ -55,8 +54,7 @@ export function FindUs() {
         <div>
           <h4 className="text-xl font-bold uppercase tracking-tight text-espresso">Email Us</h4>
           <p className="mt-3 text-base text-espresso/80 leading-relaxed">
-            <a href="mailto:info@mugamba.rw" className="block font-bold hover:text-roast transition">info@mugamba.rw</a>
-            <a href="mailto:sales@mugamba.rw" className="block mt-1 font-bold hover:text-roast transition">sales@mugamba.rw</a>
+            <a href="mailto:mugambaco@gmail.com" className="block font-bold hover:text-roast transition">mugambaco@gmail.com</a>
           </p>
         </div>
       </div>

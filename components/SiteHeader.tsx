@@ -6,11 +6,10 @@ import { useState } from "react";
 import { MessageCircle, ShoppingBag, Menu, X } from "lucide-react";
 
 const nav = [
-  { label: "Coffee", href: "/products" },
+  { label: "Coffee", href: "/coffee" },
   { label: "Machines", href: "/machines" },
   { label: "Rentals", href: "/rentals" },
-  { label: "Roasting", href: "/roasting" },
-  { label: "Admin", href: "/admin" }
+  { label: "Roasting", href: "/roasting" }
 ];
 
 export function SiteHeader() {
@@ -20,7 +19,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-espresso/10 bg-espresso text-crema backdrop-blur-xl">
       <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-4" aria-label="Mugamba Coffee Factory home">
-          <Image src="/media/logo.jpg" alt="Mugamba Coffee Factory logo" width={56} height={56} className="h-14 w-14 object-cover" priority />
+          <Image src="/media/logo.jpg" alt="Mugamba Coffee Factory logo" width={56} height={56} className="h-14 w-14 rounded-full object-cover" priority />
           <span className="leading-tight text-crema">
             <span className="block font-serif text-xl tracking-tight">Mugamba</span>
             <span className="block text-xs font-bold uppercase tracking-[0.3em] text-brass">Coffee Factory</span>

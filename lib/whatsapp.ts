@@ -1,6 +1,6 @@
 import type { RequestType } from "./types";
 
-const ownerNumber = process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP || "250788000000";
+const ownerNumber = process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP || "250787793722";
 
 const labels: Record<RequestType, string> = {
   coffee_order: "Coffee order",
