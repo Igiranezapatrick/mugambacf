@@ -37,18 +37,29 @@ export function SiteHeader() {
         ? "border-espresso/10 bg-white/90 text-espresso shadow-soft" 
         : "border-transparent bg-transparent text-crema"
     }`}>
-      <div className="mx-auto flex h-16 items-center justify-between px-6 sm:px-8">
+      <div className={`mx-auto flex items-center justify-between px-6 sm:px-8 transition-all duration-300 ${
+        isSolid ? "h-14" : "h-20"
+      }`}>
         <Link href="/" className="flex items-center gap-3" aria-label="Mugamba Coffee Factory home">
-          <Image src="/logo/logo.png" alt="Mugamba Coffee Factory logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover" priority />
+          <Image 
+            src="/logo/logo.png" 
+            alt="Mugamba Coffee Factory logo" 
+            width={56} 
+            height={56} 
+            className={`rounded-full object-cover transition-all duration-300 ${
+              isSolid ? "h-10 w-10" : "h-14 w-14"
+            }`} 
+            priority 
+          />
           <span className={`leading-tight transition-colors duration-300 ${isSolid ? "text-espresso" : "text-crema"}`}>
-            <span className="block font-serif text-base tracking-tight">Mugamba</span>
-            <span className="block text-[9px] font-bold uppercase tracking-[0.3em] text-brass">Coffee Factory</span>
+            <span className={`block font-serif tracking-tight transition-all duration-300 ${isSolid ? "text-base" : "text-lg"}`}>Mugamba</span>
+            <span className={`block font-bold uppercase tracking-[0.3em] text-brass transition-all duration-300 ${isSolid ? "text-[8px]" : "text-[9px]"}`}>Coffee Factory</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className={`hidden items-center gap-8 text-sm font-bold uppercase tracking-widest transition-colors duration-300 md:flex ${
-          isSolid ? "text-espresso/90" : "text-crema/90"
+        <nav className={`hidden items-center gap-8 font-bold uppercase tracking-widest transition-all duration-300 md:flex ${
+          isSolid ? "text-xs text-espresso/90" : "text-sm text-crema/90"
         }`}>
           {nav.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-brass">
@@ -58,14 +69,18 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/products" className={`hidden items-center gap-2 border bg-transparent px-4 py-2 text-sm font-bold uppercase tracking-widest transition duration-300 hover:border-brass hover:text-brass lg:flex ${
-            isSolid ? "border-espresso/30 text-espresso" : "border-crema/30 text-crema"
+          <Link href="/products" className={`hidden items-center gap-2 border bg-transparent font-bold uppercase tracking-widest transition-all duration-300 hover:border-brass hover:text-brass lg:flex ${
+            isSolid 
+              ? "border-espresso/30 text-espresso px-3 py-1.5 text-xs" 
+              : "border-crema/30 text-crema px-4 py-2 text-sm"
           }`}>
             <ShoppingBag size={16} />
             Shop
           </Link>
-          <a href="#contact" className={`hidden items-center gap-2 bg-brass px-4 py-2 text-sm font-bold uppercase tracking-widest transition duration-300 sm:flex ${
-            isSolid ? "text-espresso hover:bg-espresso hover:text-crema" : "text-espresso hover:bg-crema hover:text-espresso"
+          <a href="#contact" className={`hidden items-center gap-2 bg-brass font-bold uppercase tracking-widest transition-all duration-300 sm:flex ${
+            isSolid 
+              ? "text-espresso hover:bg-espresso hover:text-crema px-3 py-1.5 text-xs" 
+              : "text-espresso hover:bg-crema hover:text-espresso px-4 py-2 text-sm"
           }`}>
             <MessageCircle size={16} />
             Contact
