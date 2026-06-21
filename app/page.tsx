@@ -112,8 +112,8 @@ export default function Home() {
               The site is designed for quick ordering, visible contact paths, and structured product management for Kigali's coffee scene.
             </p>
           </div>
-          <div className="relative min-h-[300px] sm:min-h-[400px] border border-white/10">
-            <Image src="/media/latte.jpg" alt="Premium Mugamba coffee cup" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+          <div className="relative min-h-[300px] sm:min-h-[400px] border border-white/10 transition-all duration-300 shadow-[12px_12px_0px_0px_#f7efe1] hover:scale-[1.02] hover:shadow-[16px_16px_0px_0px_#c99a4a] hover:border-brass/40 group overflow-hidden">
+            <Image src="/media/latte.jpg" alt="Premium Mugamba coffee cup" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
           </div>
         </div>
       </section>
