@@ -76,3 +76,28 @@ video {
     radial-gradient(circle at 1px 1px, rgba(36, 19, 15, 0.08) 1px, transparent 0);
   background-size: 22px 22px;
 }
+
+/* Custom themed scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7efe1; /* crema */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24130f; /* espresso */
+  border: 2px solid #f7efe1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c99a4a; /* brass on hover */
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #24130f #f7efe1;
+}
