@@ -3,7 +3,10 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Footer } from "@/components/Footer";
 
+import { SmoothScroll } from "@/components/SmoothScroll";
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,9 +42,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
-        <SiteHeader />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <SiteHeader />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
