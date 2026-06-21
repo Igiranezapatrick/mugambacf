@@ -37,9 +37,26 @@ export function DynamicCatalog({ productType, featuredOnly = false, limit }: Dyn
   }, [products, limit]);
 
   if (loading) {
+    const skeletonCount = limit || 3;
     return (
-      <div className="grid place-items-center rounded-lg border border-espresso/10 bg-white py-16 text-espresso/60">
-        <Loader2 className="animate-spin" />
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {Array.from({ length: skeletonCount }).map((_, index) => (
+          <div key={index} className="animate-pulse border border-espresso/10 bg-white overflow-hidden flex flex-col h-full shadow-sm">
+            <div className="relative aspect-[4/3] bg-espresso/5" />
+            <div className="p-4 sm:p-6 flex flex-col flex-grow space-y-4">
+              <div className="space-y-2 flex-grow">
+                <div className="h-6 w-3/4 bg-espresso/10 rounded-sm" />
+                <div className="h-4 w-full bg-espresso/5 rounded-sm mt-3" />
+                <div className="h-4 w-5/6 bg-espresso/5 rounded-sm" />
+              </div>
+              <div className="space-y-2 pt-2 border-t border-espresso/5">
+                <div className="h-4 w-1/2 bg-espresso/5 rounded-sm" />
+                <div className="h-4 w-2/3 bg-espresso/5 rounded-sm" />
+              </div>
+              <div className="h-12 w-full bg-espresso/10 rounded-sm mt-auto" />
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
