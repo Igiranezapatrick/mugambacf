@@ -127,7 +127,7 @@ export default function Home() {
 
       <section id="contact" className="bg-crema py-0">
         <div className="mx-auto grid max-w-7xl gap-8 sm:gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div className="space-y-6 py-12 sm:py-20">
+          <div className="py-12 sm:py-20">
             <SectionIntro
               eyebrowSize="text-[10px] sm:text-xs"
               titleSize="text-2xl sm:text-4xl"
@@ -136,7 +136,6 @@ export default function Home() {
               title="Visit Kigali factory"
               body="Reach out to us via phone or email, or visit our factory in Gikondo. We are ready to assist with all your coffee needs." 
             />
-            <FindUs />
           </div>
 
           <RequestForm requestType="contact" />
