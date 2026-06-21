@@ -21,24 +21,26 @@ export default function Home() {
         {/* Bottom-left black gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/35 to-transparent pointer-events-none" />
         <div className="relative mx-auto grid min-h-screen max-w-7xl content-end px-4 pt-28 pb-20 sm:px-6 lg:px-8 lg:pb-28">
-          <div className="max-w-4xl">
-            <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica</p>
-            <h1 className="mt-6 sm:mt-8 font-serif text-3xl leading-[1.1] sm:text-6xl lg:text-7xl tracking-tight">Mugamba Coffee Factory</h1>
-            <p className="mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-crema/85 border-l-4 border-brass pl-6">
-              Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
-            </p>
-            <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
-              <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 hover:bg-crema shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
-                <ShoppingBag size={16} /> Buy Coffee
-              </Link>
-              <Link href="/rentals" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
-                Rentals
-              </Link>
-              <a href="#contact" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
-                <MessageCircle size={16} /> Contact
-              </a>
+          <HeroAnimation>
+            <div className="max-w-4xl">
+              <p className="hero-text-zoom text-xs sm:text-sm font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica</p>
+              <h1 className="hero-text-zoom mt-6 sm:mt-8 font-serif text-3xl leading-[1.1] sm:text-6xl lg:text-7xl tracking-tight">Mugamba Coffee Factory</h1>
+              <p className="hero-text-zoom mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-crema/85 border-l-4 border-brass pl-6">
+                Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
+              </p>
+              <div className="hero-text-zoom mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
+                <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 hover:bg-crema shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
+                  <ShoppingBag size={16} /> Buy Coffee
+                </Link>
+                <Link href="/rentals" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
+                  Rentals
+                </Link>
+                <a href="#contact" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
+                  <MessageCircle size={16} /> Contact
+                </a>
+              </div>
             </div>
-          </div>
+          </HeroAnimation>
         </div>
       </section>
 
