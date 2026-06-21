@@ -68,39 +68,37 @@ export function RequestForm({ requestType, product, compact = false, onClose }: 
   return (
     <form onSubmit={submit} className={compact ? "grid gap-4" : "flex flex-col border-x border-espresso/15 bg-white shadow-lg h-full"}>
       <div className={compact ? "grid gap-4" : "p-6 flex flex-col flex-grow space-y-4"}>
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-roast">{requestLabel(requestType)}</p>
-            <h3 className="mt-1.5 font-serif text-2xl text-espresso tracking-tight">{product?.name || "Send a request"}</h3>
-          </div>
+        <div className="relative w-full text-center py-1">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-roast">{requestLabel(requestType)}</p>
+          <h3 className="mt-1.5 font-serif text-2xl text-espresso tracking-tight">{product?.name || "Send a request"}</h3>
           {onClose ? (
-            <button type="button" onClick={onClose} className="border border-espresso/15 p-2 text-espresso/70 transition hover:bg-crema hover:text-espresso" aria-label="Close request form">
+            <button type="button" onClick={onClose} className="absolute right-0 top-1/2 -translate-y-1/2 border border-espresso/15 p-2 text-espresso/70 transition hover:bg-crema hover:text-espresso" aria-label="Close request form">
               <X size={20} />
             </button>
           ) : null}
         </div>
 
-        <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso">
+        <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso text-center">
           Full name
-          <input name="fullName" className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition" placeholder="Your full name" />
+          <input name="fullName" className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition text-center" placeholder="Your full name" />
         </label>
-        <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso">
+        <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso text-center">
           Phone number
-          <input name="phone" className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition" placeholder="+250..." />
+          <input name="phone" className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition text-center" placeholder="+250..." />
         </label>
         {requestType === "machine_rental" ? (
-          <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso">
+          <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso text-center">
             Duration needed
-            <input name="rentalDuration" className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition" placeholder="Daily, weekly, monthly..." />
+            <input name="rentalDuration" className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition text-center" placeholder="Daily, weekly, monthly..." />
           </label>
         ) : null}
-        <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso">
+        <label className="grid gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-espresso text-center">
           Optional message
-          <textarea name="message" rows={3} className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition" placeholder="Tell us what you need" />
+          <textarea name="message" rows={3} className="border border-espresso/20 bg-crema/20 px-4 py-2.5 text-sm sm:text-base outline-none focus:border-brass transition text-center" placeholder="Tell us what you need" />
         </label>
-        {error ? <p className="border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 font-bold">{error}</p> : null}
+        {error ? <p className="border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 font-bold text-center">{error}</p> : null}
         {!supabase ? (
-          <p className="border border-brass/20 bg-brass/10 px-4 py-3 text-xs leading-relaxed text-espresso/80">
+          <p className="border border-brass/20 bg-brass/10 px-4 py-3 text-xs leading-relaxed text-espresso/80 text-center">
             Supabase is not configured yet, so this demo will open WhatsApp only. Add the anon key in `.env.local` to save requests.
           </p>
         ) : null}
