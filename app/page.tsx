@@ -127,7 +127,7 @@ export default function Home() {
 
       <section id="contact" className="bg-crema py-0">
         <div className="mx-auto grid max-w-7xl gap-8 sm:gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div className="py-12 sm:py-20">
+          <div className="py-12 sm:py-20 space-y-8">
             <SectionIntro
               eyebrowSize="text-[10px] sm:text-xs"
               titleSize="text-2xl sm:text-4xl"
@@ -136,6 +136,25 @@ export default function Home() {
               title="Visit Kigali factory"
               body="Reach out to us via phone or email, or visit our factory in Gikondo. We are ready to assist with all your coffee needs." 
             />
+            
+            <div className="grid gap-6 sm:grid-cols-2 text-xs sm:text-sm text-espresso/70 border-t border-espresso/10 pt-6">
+              <div className="space-y-1">
+                <p className="font-bold uppercase tracking-wider text-espresso">Address</p>
+                <p className="leading-relaxed">Mugamba Coffee Factory<br />KK 123 Street, Gikondo, Kigali</p>
+              </div>
+              <div className="space-y-1">
+                <p className="font-bold uppercase tracking-wider text-espresso">Hours</p>
+                <p className="leading-relaxed">Monday - Saturday: 8:00 AM - 6:00 PM<br /><span className="text-roast font-semibold">Sunday: Closed</span></p>
+              </div>
+              <div className="space-y-1">
+                <p className="font-bold uppercase tracking-wider text-espresso">Call Us</p>
+                <p><a href="tel:+250787793722" className="hover:text-roast font-semibold transition">+250 787 793 722</a></p>
+              </div>
+              <div className="space-y-1">
+                <p className="font-bold uppercase tracking-wider text-espresso">Email Us</p>
+                <p><a href="mailto:mugambaco@gmail.com" className="hover:text-roast font-semibold transition">mugambaco@gmail.com</a></p>
+              </div>
+            </div>
           </div>
 
           <RequestForm requestType="contact" />
