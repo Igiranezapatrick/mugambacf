@@ -17,17 +17,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-espresso/10 bg-white text-espresso backdrop-blur-xl">
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-4" aria-label="Mugamba Coffee Factory home">
           <Image src="/media/logo.jpg" alt="Mugamba Coffee Factory logo" width={56} height={56} className="h-14 w-14 rounded-full object-cover" priority />
           <span className="leading-tight text-espresso">
-            <span className="block font-serif text-xl tracking-tight">Mugamba</span>
-            <span className="block text-xs font-bold uppercase tracking-[0.3em] text-brass">Coffee Factory</span>
+            <span className="block font-serif text-lg tracking-tight">Mugamba</span>
+            <span className="block text-[10px] font-bold uppercase tracking-[0.3em] text-brass">Coffee Factory</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-10 text-base font-bold uppercase tracking-widest text-espresso/90 md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-bold uppercase tracking-widest text-espresso/90 md:flex">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-brass">
               {item.label}
@@ -35,13 +35,13 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <Link href="/products" className="hidden items-center gap-3 border border-espresso/30 bg-transparent px-6 py-3 text-base font-bold uppercase tracking-widest text-espresso transition hover:border-brass hover:text-brass lg:flex">
-            <ShoppingBag size={20} />
+        <div className="flex items-center gap-3">
+          <Link href="/products" className="hidden items-center gap-2 border border-espresso/30 bg-transparent px-4 py-2 text-sm font-bold uppercase tracking-widest text-espresso transition hover:border-brass hover:text-brass lg:flex">
+            <ShoppingBag size={16} />
             Shop
           </Link>
-          <a href="#contact" className="hidden items-center gap-3 bg-brass px-6 py-3 text-base font-bold uppercase tracking-widest text-espresso transition hover:bg-espresso hover:text-crema sm:flex">
-            <MessageCircle size={20} />
+          <a href="#contact" className="hidden items-center gap-2 bg-brass px-4 py-2 text-sm font-bold uppercase tracking-widest text-espresso transition hover:bg-espresso hover:text-crema sm:flex">
+            <MessageCircle size={16} />
             Contact
           </a>
           
@@ -51,39 +51,39 @@ export function SiteHeader() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={32} /> : <Menu size={32} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div className="absolute left-0 top-24 w-full border-b border-espresso/10 bg-white py-8 shadow-2xl md:hidden">
-          <nav className="flex flex-col items-center gap-6 px-4">
+        <div className="absolute left-0 top-20 w-full border-b border-espresso/10 bg-white py-6 shadow-2xl md:hidden">
+          <nav className="flex flex-col items-center gap-5 px-4">
             {nav.map((item) => (
               <Link 
                 key={item.href} 
                 href={item.href} 
-                className="text-lg font-bold uppercase tracking-widest text-espresso hover:text-brass"
+                className="text-base font-bold uppercase tracking-widest text-espresso hover:text-brass"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <div className="mt-4 flex w-full flex-col gap-4">
+            <div className="mt-3 flex w-full flex-col gap-3">
               <Link 
                 href="/products" 
-                className="flex items-center justify-center gap-3 border border-espresso/30 py-4 text-base font-bold uppercase tracking-widest text-espresso"
+                className="flex items-center justify-center gap-2 border border-espresso/30 py-3 text-sm font-bold uppercase tracking-widest text-espresso"
                 onClick={() => setIsOpen(false)}
               >
-                <ShoppingBag size={20} /> Shop
+                <ShoppingBag size={16} /> Shop
               </Link>
               <a 
                 href="#contact" 
-                className="flex items-center justify-center gap-3 bg-brass py-4 text-base font-bold uppercase tracking-widest text-espresso"
+                className="flex items-center justify-center gap-2 bg-brass py-3 text-sm font-bold uppercase tracking-widest text-espresso"
                 onClick={() => setIsOpen(false)}
               >
-                <MessageCircle size={20} /> Contact
+                <MessageCircle size={16} /> Contact
               </a>
             </div>
           </nav>
