@@ -30,13 +30,13 @@ export default function Home() {
                 Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
               </p>
               <div className="hero-text-zoom mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
-                <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 hover:bg-crema shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
+                <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 hover:bg-crema shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#24130f]">
                   <ShoppingBag size={16} /> Buy Coffee
                 </Link>
-                <Link href="/rentals" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
+                <Link href="/rentals" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_rgba(247,239,225,0.25)]">
                   Rentals
                 </Link>
-                <a href="#contact" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
+                <a href="#contact" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition-all duration-300 hover:border-brass hover:text-brass shadow-[4px_4px_0px_0px_rgba(247,239,225,0.25)] hover:scale-105 hover:shadow-[5px_5px_0px_0px_rgba(247,239,225,0.25)]">
                   <MessageCircle size={16} /> Contact
                 </a>
               </div>
@@ -56,7 +56,7 @@ export default function Home() {
                 const Icon = service.icon;
                 return (
                   <MotionReveal key={service.title} delay={index * 0.06}>
-                    <Link href={service.href} className="block h-full border border-espresso/15 bg-white p-6 sm:p-8 transition-all duration-300 shadow-[4px_4px_0px_0px_#24130f] hover:scale-[1.03] hover:shadow-[6px_6px_0px_0px_#c99a4a] hover:border-brass/40">
+                    <Link href={service.href} className="block h-full border border-espresso/15 bg-white p-6 sm:p-8 transition-all duration-300 shadow-[4px_4px_0px_0px_#24130f] hover:scale-[1.03] hover:shadow-[6px_6px_0px_0px_#24130f] hover:border-brass/40">
                       <Icon className="text-roast" size={32} />
                       <h3 className="mt-6 sm:mt-8 font-serif text-xl sm:text-2xl text-espresso tracking-tight">{service.title}</h3>
                       <p className="mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-espresso/70">{service.description}</p>
@@ -71,7 +71,7 @@ export default function Home() {
 
       <section className="bg-white py-16 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 sm:gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div className="relative min-h-[300px] sm:min-h-[500px] bg-espresso/5 border border-espresso/10 shadow-[12px_12px_0px_0px_#24130f] transition-all duration-300 hover:scale-[1.02] hover:shadow-[16px_16px_0px_0px_#c99a4a] hover:border-brass/40">
+          <div className="relative min-h-[300px] sm:min-h-[500px] bg-espresso/5 border border-espresso/10 shadow-[12px_12px_0px_0px_#24130f] transition-all duration-300 hover:scale-[1.02] hover:shadow-[16px_16px_0px_0px_#24130f] hover:border-brass/40">
             <Image 
               src="/media/factory.jpg" 
               alt="Mugamba Coffee Factory coffee bar and machines" 
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-6 sm:gap-8">
             <SectionIntro eyebrowSize="text-[10px] sm:text-xs" titleSize="text-3xl sm:text-5xl" bodySize="text-sm sm:text-base" eyebrow="Featured products" title="Coffee and machines" body="Products uploaded in the admin dashboard appear here automatically, with request buttons that save the customer lead." />
-            <Link href="/products" className="inline-flex items-center gap-2 border-2 border-espresso bg-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a] hover:border-brass hover:text-brass">
+            <Link href="/products" className="inline-flex items-center gap-2 border-2 border-espresso bg-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#24130f] hover:border-brass hover:text-brass">
               View All <ArrowRight size={18} />
             </Link>
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
               The site is designed for quick ordering, visible contact paths, and structured product management for Kigali's coffee scene.
             </p>
           </div>
-          <div className="relative min-h-[300px] sm:min-h-[400px] border border-white/10 transition-all duration-300 shadow-[12px_12px_0px_0px_#f7efe1] hover:scale-[1.02] hover:shadow-[16px_16px_0px_0px_#c99a4a] hover:border-brass/40 group overflow-hidden">
+          <div className="relative min-h-[300px] sm:min-h-[400px] border border-white/10 transition-all duration-300 shadow-[12px_12px_0px_0px_#f7efe1] hover:scale-[1.02] hover:shadow-[16px_16px_0px_0px_#f7efe1] hover:border-brass/40 group overflow-hidden">
             <Image src="/media/latte.jpg" alt="Premium Mugamba coffee cup" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
           </div>
         </div>
