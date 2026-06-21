@@ -125,9 +125,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-crema pt-0 pb-12 sm:pb-20">
-        <div className="mx-auto grid max-w-7xl gap-8 sm:gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 items-start">
-          <div className="space-y-6 pt-12 sm:pt-20">
+      <section id="contact" className="bg-crema py-0">
+        <div className="mx-auto grid max-w-7xl gap-8 sm:gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+          <div className="space-y-6 py-12 sm:py-20">
             <SectionIntro
               eyebrowSize="text-[10px] sm:text-xs"
               titleSize="text-2xl sm:text-4xl"
