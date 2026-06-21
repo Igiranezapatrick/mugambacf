@@ -23,7 +23,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     rafId = requestAnimationFrame(raf);
 
     const checkScrollBg = () => {
-      const element = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const element = document.elementFromPoint(window.innerWidth - 40, window.innerHeight / 2);
       if (!element) return;
       
       const isDark = element.closest('.bg-espresso') || element.closest('.noise');
