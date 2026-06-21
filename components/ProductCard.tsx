@@ -33,7 +33,7 @@ export function ProductCard({ product, onRequest }: ProductCardProps) {
           fill
           sizes="(min-width: 1024px) 33vw, 100vw"
           className={`object-cover transition duration-500 ${
-            imageLoading ? "scale-95 blur-sm grayscale opacity-0" : "scale-100 blur-0 grayscale-0 opacity-100 group-hover:scale-105"
+            imageLoading ? "scale-95 blur-sm grayscale opacity-0" : "scale-100 blur-0 grayscale group-hover:grayscale-0 opacity-100 group-hover:scale-105"
           }`}
           onLoad={() => setImageLoading(false)}
         />
