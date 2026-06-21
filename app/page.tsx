@@ -19,20 +19,20 @@ export default function Home() {
         </video>
         <div className="relative mx-auto grid min-h-screen max-w-7xl content-center px-4 pt-28 pb-12 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <p className="text-sm sm:text-base font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica</p>
-            <h1 className="mt-6 sm:mt-8 font-serif text-4xl leading-[1.1] sm:text-7xl lg:text-9xl tracking-tight">Mugamba Coffee Factory</h1>
-            <p className="mt-6 sm:mt-10 max-w-2xl text-lg sm:text-xl leading-relaxed text-crema/85 border-l-4 border-brass pl-6">
+            <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica</p>
+            <h1 className="mt-6 sm:mt-8 font-serif text-3xl leading-[1.1] sm:text-6xl lg:text-7xl tracking-tight">Mugamba Coffee Factory</h1>
+            <p className="mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-crema/85 border-l-4 border-brass pl-6">
               Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
             </p>
-            <div className="mt-8 sm:mt-12 flex flex-wrap gap-3 sm:gap-4">
-              <Link href="/products" className="inline-flex items-center gap-3 bg-brass px-6 py-4 sm:px-10 sm:py-5 text-base sm:text-lg font-bold uppercase tracking-widest text-espresso transition hover:bg-crema">
-                <ShoppingBag size={20} /> Buy Coffee
+            <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
+              <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition hover:bg-crema">
+                <ShoppingBag size={16} /> Buy Coffee
               </Link>
-              <Link href="/rentals" className="inline-flex items-center gap-3 border-2 border-crema/40 bg-transparent px-6 py-4 sm:px-10 sm:py-5 text-base sm:text-lg font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
+              <Link href="/rentals" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
                 Rentals
               </Link>
-              <a href="#contact" className="inline-flex items-center gap-3 border-2 border-crema/40 bg-transparent px-6 py-4 sm:px-10 sm:py-5 text-base sm:text-lg font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
-                <MessageCircle size={20} /> Contact
+              <a href="#contact" className="inline-flex items-center gap-2 border-2 border-crema/40 bg-transparent px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-crema transition hover:border-brass hover:text-brass">
+                <MessageCircle size={16} /> Contact
               </a>
             </div>
           </div>
