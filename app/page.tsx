@@ -70,7 +70,7 @@ export default function Home() {
 
       <section className="bg-white py-16 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 sm:gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div className="relative min-h-[300px] sm:min-h-[500px] bg-espresso/5">
+          <div className="relative min-h-[300px] sm:min-h-[500px] bg-espresso/5 border border-espresso/10 shadow-[8px_8px_0px_0px_#24130f]">
             <Image 
               src="/media/factory.jpg" 
               alt="Mugamba Coffee Factory coffee bar and machines" 
