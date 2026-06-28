@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Footer } from "@/components/Footer";
-
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mugamba.rw";
-
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -24,6 +21,18 @@ export const metadata: Metadata = {
     "coffee roasting Kigali",
     "coffee machine sales Rwanda"
   ],
+  alternates: {
+    canonical: "/"
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" }
+    ],
+    apple: [
+      { url: "/icon.png", type: "image/png" }
+    ]
+  },
   openGraph: {
     title: "Mugamba Coffee Factory",
     description: "Premium Arabica coffee, machine sales, rentals, and roasting services in Kigali, Rwanda.",
@@ -40,6 +49,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
       </head>
       <body>
         <SmoothScroll>

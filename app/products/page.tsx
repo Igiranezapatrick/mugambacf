@@ -5,7 +5,10 @@ import { SectionIntro } from "@/components/SectionIntro";
 
 export const metadata: Metadata = {
   title: "Premium Arabica Coffee Products & Machinery",
-  description: "Browse the Mugamba Coffee Factory shop catalog for premium Arabica coffee beans and professional espresso machinery."
+  description: "Browse the Mugamba Coffee Factory shop catalog for premium Arabica coffee beans and professional espresso machinery.",
+  alternates: {
+    canonical: "/products"
+  }
 };
 
 export default function ProductsPage() {
