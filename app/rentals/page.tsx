@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Coffee Machine Rentals",
   description: "Rent coffee machines for events, offices, cafés, and short-term use from Mugamba Coffee Factory in Kigali, Rwanda.",
   alternates: {
-    canonical: "/rentals"
+    canonical: "/rentals/"
   }
 };
 

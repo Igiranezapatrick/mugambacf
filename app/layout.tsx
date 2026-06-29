@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mugamba.rw";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mugamba.rw/";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {

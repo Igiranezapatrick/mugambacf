@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Premium Rwandan Arabica Coffee Beans",
   description: "Freshly roasted and ground Arabica coffee beans sourced from the highlands of Rwanda, available for order from Mugamba Coffee Factory.",
   alternates: {
-    canonical: "/coffee"
+    canonical: "/coffee/"
   }
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Premium Arabica Coffee Products & Machinery",
   description: "Browse the Mugamba Coffee Factory shop catalog for premium Arabica coffee beans and professional espresso machinery.",
   alternates: {
-    canonical: "/products"
+    canonical: "/products/"
   }
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Coffee Roasting Services",
   description: "Professional Arabica coffee roasting services from Mugamba Coffee Factory in Kigali, Rwanda.",
   alternates: {
-    canonical: "/roasting"
+    canonical: "/roasting/"
   }
 };
 

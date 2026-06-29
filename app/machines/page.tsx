@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Coffee Machine Sales",
   description: "Browse coffee machines for sale from Mugamba Coffee Factory in Kigali, Rwanda and request purchase details on WhatsApp.",
   alternates: {
-    canonical: "/machines"
+    canonical: "/machines/"
   }
 };
 
