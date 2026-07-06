@@ -31,6 +31,9 @@ export function Footer() {
           <div>
             <h3 className="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-brass">Explore</h3>
             <div className="mt-5 flex flex-col gap-3 text-xs sm:text-sm text-crema/80">
+              <Link href="/" className="group flex items-center gap-1 hover:text-brass transition-all duration-300 hover:translate-x-1">
+                <span>Home</span>
+              </Link>
               <Link href="/coffee" className="group flex items-center gap-1 hover:text-brass transition-all duration-300 hover:translate-x-1">
                 <span>Coffee Products</span>
               </Link>
@@ -42,6 +45,9 @@ export function Footer() {
               </Link>
               <Link href="/roasting" className="group flex items-center gap-1 hover:text-brass transition-all duration-300 hover:translate-x-1">
                 <span>Roasting Services</span>
+              </Link>
+              <Link href="/products" className="group flex items-center gap-1 hover:text-brass transition-all duration-300 hover:translate-x-1">
+                <span>Shop</span>
               </Link>
             </div>
           </div>
