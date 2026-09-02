@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mugamba.rw/";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mugamba.rw";
 const siteName = "Mugamba Coffee Factory";
 const siteNavigation = [
   { name: "Home", url: `${siteUrl}` },
@@ -61,6 +61,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  /* 1. ADDED: This injects <meta name="google" content="notranslate" /> globally */
+  googleDotCom: "notranslate", 
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -84,12 +86,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    /* 2. UPDATED: Added translate="no" and className="notranslate" here */
+    <html lang="en" translate="no" className="notranslate">
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/icon.png" />
+        {/* 3. CLEANED UP: Next.js reads icons from metadata, so manual link tags are removed */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
       <body>
