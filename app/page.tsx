@@ -27,7 +27,7 @@ export default function Home() {
               <p className="hero-text-zoom text-xs sm:text-sm font-bold uppercase tracking-[0.4em] text-brass">Kigali · Rwanda Arabica</p>
               <h1 className="hero-text-zoom mt-6 sm:mt-8 font-serif text-3xl leading-[1.1] sm:text-6xl lg:text-7xl tracking-tight">Mugamba Coffee Factory</h1>
               <p className="hero-text-zoom mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-crema/85 border-l-4 border-brass pl-6">
-                Premium Arabica coffee, professional roasting, and coffee machine solutions for homes, cafés, offices, and events.
+                Premium Arabica coffee, artisanal roasting, and coffee machine solutions for homes, cafés, offices, and events.
               </p>
               <div className="hero-text-zoom mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
                 <Link href="/products" className="inline-flex items-center gap-2 bg-brass px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-widest text-espresso transition-all duration-300 hover:bg-crema shadow-[4px_4px_0px_0px_#24130f] hover:scale-105 hover:shadow-[5px_5px_0px_0px_#c99a4a]">
@@ -152,7 +152,7 @@ export default function Home() {
               </div>
               <div className="space-y-1">
                 <p className="font-bold uppercase tracking-wider text-espresso">Email Us</p>
-                <p><a href="mailto:mugambaco@gmail.com" className="hover:text-roast font-semibold transition">mugambaco@gmail.com</a></p>
+                <p><a href="mailto:mugambacoffe@gmail.com" className="hover:text-roast font-semibold transition">mugambacoffe@gmail.com</a></p>
               </div>
             </div>
           </div>

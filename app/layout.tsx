@@ -61,8 +61,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
-  /* 1. ADDED: This injects <meta name="google" content="notranslate" /> globally */
-  googleDotCom: "notranslate", 
+  
+  /* FIX: This is the correct Next.js configuration to inject arbitrary meta tags like <meta name="google" content="notranslate" /> */
+  other: {
+    google: "notranslate",
+  },
+
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -83,6 +87,7 @@ export const metadata: Metadata = {
     type: "website"
   }
 };
+
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

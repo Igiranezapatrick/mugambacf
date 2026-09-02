@@ -54,7 +54,7 @@ export function FindUs() {
         <div>
           <h4 className="text-sm font-bold uppercase tracking-wider text-espresso">Email Us</h4>
           <p className="mt-1.5 text-xs sm:text-sm text-espresso/80 leading-relaxed">
-            <a href="mailto:mugambaco@gmail.com" className="block font-bold hover:text-roast transition">mugambaco@gmail.com</a>
+            <a href="mailto:mugambacoffe@gmail.com" className="block font-bold hover:text-roast transition">mugambacoffe@gmail.com</a>
           </p>
         </div>
       </div>

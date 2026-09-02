@@ -64,9 +64,9 @@ export function Footer() {
                 <Phone size={18} className="shrink-0 text-brass" /> 
                 <span>+250 787 793 722</span>
               </a>
-              <a href="mailto:mugambaco@gmail.com" className="flex items-center gap-3 hover:text-brass transition-colors duration-300">
+              <a href="mailto:mugambacoffe@gmail.com" className="flex items-center gap-3 hover:text-brass transition-colors duration-300">
                 <Mail size={18} className="shrink-0 text-brass" /> 
-                <span>mugambaco@gmail.com</span>
+                <span>mugambacoffe@gmail.com</span>
               </a>
               <div className="pt-1.5">
                 <a 
@@ -88,7 +88,7 @@ export function Footer() {
               © {new Date().getFullYear()} Mugamba Coffee Factory. All Rights Reserved.
             </p>
             <p className="text-[11px] text-crema/50">
-              Made by <a href="https://micorp" target="_blank" rel="noopener noreferrer" className="text-brass hover:text-white underline decoration-brass/30 hover:decoration-white underline-offset-4 transition duration-300 font-bold">Mirror Corporation</a>. Contact for our services.
+              Made by igiraneza patrick member of <a href="https://micorp.pro" target="_blank" rel="noopener noreferrer" className="text-brass hover:text-white underline decoration-brass/30 hover:decoration-white underline-offset-4 transition duration-300 font-bold">Mirror Corporation</a>. Contact for our services.
             </p>
           </div>
           
